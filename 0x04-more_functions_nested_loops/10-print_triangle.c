@@ -21,7 +21,7 @@ void print_triangle(int size)
 		{
 			for (spaces = size - row; spaces >= 1; spaces--)
 			{
-				_putchar('');
+				_putchar(' ');
 			}
 			for (hashes = 1; hashes <= row; hashes++)
 			{
@@ -29,35 +29,5 @@ void print_triangle(int size)
 			}
 			_putchar('\n');
 		}
-
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
