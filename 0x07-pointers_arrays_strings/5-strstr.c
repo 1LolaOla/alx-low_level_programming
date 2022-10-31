@@ -7,34 +7,31 @@
  *
  * Return: If the substring is located - a pointer to the beginning
  * of the located substring.
- * If the substring is not located - NULL.
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int index;
+	unsigned int i = 0, j = 0;
 
-	if (*needle == 0)
-		return (haystack);
-
-	while (*haystack)
+	while (haystack[i])
 	{
 
-		index = 0;
-
-		if (haystack[index] == needle[index])
+		while (needle[j] && (haystack[i] == needle[0]))
 		{
-			do {
 
-				if (needle[index + 1] == '\0')
-					return (haystack);
-
-				index++;
-			} while (haystack[index] == needle[index]);
+			if (haystack[i + j] == needle[j])
+				j++;
+			else
+				break;
+		}
+		if (needle[j])
+		{
+			i++;
+			j = 0;
 		}
 
-		haystack++;
+		else
+			return (haystack + i);
 	}
-
-	return ('\0');
+	return (0);
 }
