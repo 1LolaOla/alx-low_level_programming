@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Function that prints the number of arguments it received
@@ -8,13 +9,8 @@
  *
  * Return: void (empty)
  */
-
-int main(int argc, char *argv[])
+int main(int argc, __attribute__((unused)) char **argv)
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-	printf("%s\n", argv[i]);
-
+	printf("%d\n", argc - 1);
 	return (0);
 }
