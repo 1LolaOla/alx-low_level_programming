@@ -1,22 +1,27 @@
 #include "main.h"
 
+#include <stdlib.h>
+
 /**
-* malloc_checked - array for prints a string
-* @b: number of memory
-*
-* Return: void
-*/
-
-void *malloc_checked(unsigned int b)
+ * create_array - array for prints a string
+ * @size: the number of elements in array
+ * @c: char
+ *
+ * Return: a pointer to the array, or NULL if it fails
+ */
+char *create_array(unsigned int size, char c)
 {
-void *p;
+	char *array;
+	unsigned int i;
 
-p = malloc(b);
-if (p == NULL)
-{
-exit(98);
+	if (size == 0)
+		return (NULL);
+
+	array = (char *)malloc(sizeof(char) * size);
+	if (array == NULL)
+		return (NULL);
+
+	for (i = 0; i < size; i++)
+		array[i] = c;
+	return (array);
 }
-
-return (p);
-}
-
