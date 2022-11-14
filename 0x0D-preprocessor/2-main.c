@@ -2,8 +2,9 @@
 
 /**
  * main - prints the name of the file
+ * @void: takes no params
  *
- * Return: always 0
+ * Return: always 0 if successful:
  */
 
 int main(void)
