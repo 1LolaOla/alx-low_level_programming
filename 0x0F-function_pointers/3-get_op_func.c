@@ -4,7 +4,7 @@
 
 /**
  * get_op_func - gets operation function
- * @s:string
+ * @s: string
  *
  * Return: result of operation
  */
